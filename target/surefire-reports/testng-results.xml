@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-18T15:16:19 BDT" name="Surefire suite" finished-at="2024-02-18T15:16:19 BDT" duration-ms="37">
+    <groups>
+    </groups>
+    <test started-at="2024-02-18T15:16:19 BDT" name="Surefire test" finished-at="2024-02-18T15:16:19 BDT" duration-ms="37">
+      <class name="com.example.demo_blog_automation.LoginTest">
+        <test-method signature="shouldAnswerWithTrue()" started-at="2024-02-18T15:16:19 BDT" name="shouldAnswerWithTrue" finished-at="2024-02-18T15:16:19 BDT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldAnswerWithTrue -->
+      </class> <!-- com.example.demo_blog_automation.LoginTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
