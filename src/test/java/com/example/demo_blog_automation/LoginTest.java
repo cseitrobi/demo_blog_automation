@@ -53,7 +53,13 @@ public class LoginTest {
 
     @Test
     public void login() throws InterruptedException {
-}
+        WebElement emailField=find.byValueKey("emailField");
+        emailField.sendKeys("xyz@gmail.com");
+        WebElement passwordField=find.byValueKey("passwordField");
+        passwordField.sendKeys("12345678");
+        WebElement loginButton=find.byValueKey("loginButton");
+        loginButton.click();
+    }
     @AfterMethod
     public void tearDown() {
         if (driver != null) {
@@ -74,6 +80,7 @@ public class LoginTest {
         AppiumUtils.clearAppCache("com.shell.consumer.shell_consumer");
 }
 }
+
 
 
 
