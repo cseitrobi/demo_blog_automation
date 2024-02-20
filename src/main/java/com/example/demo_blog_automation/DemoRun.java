@@ -4,7 +4,7 @@ package com.example.demo_blog_automation;
  * Hello world!
  *
  */
-public class Login 
+public class DemoRun 
 {
     public static void main( String[] args )
     {

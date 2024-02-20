@@ -33,22 +33,15 @@ import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 import io.github.ashwith.flutter.FlutterFinder;
 
-public class LoginTest {
+public class DemoRunTest extends config {
     RemoteWebDriver driver;
     // private AndroidDriver driver1; // Unused, remove if not needed
     private FlutterFinder find;
+    config con=new config();
 
     @BeforeMethod
-    public void openApp() throws MalformedURLException {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("deviceName", "R58R74LDNZV");
-        capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("noReset", true);
-        capabilities.setCapability("app", "/home/robi/AndroidStudioProjects/demo_blog/build/app/outputs/flutter-apk/app-debug.apk");
-        capabilities.setCapability("automationName", "Flutter");
-        driver = new AppiumDriver(new URL("http://0.0.0.0:4723"), capabilities);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        find = new FlutterFinder(driver);
+    public void apprunconfig() throws MalformedURLException {
+        find = con.config();
     }
 
     @Test
@@ -57,8 +50,11 @@ public class LoginTest {
         emailField.sendKeys("xyz@gmail.com");
         WebElement passwordField=find.byValueKey("passwordField");
         passwordField.sendKeys("12345678");
+        Thread.sleep(1000);
         WebElement loginButton=find.byValueKey("loginButton");
-        loginButton.click();
+        Thread.sleep(1000);
+        loginButton.click();        
+        Thread.sleep(2000);
     }
     @AfterMethod
     public void tearDown() {
@@ -75,9 +71,9 @@ public class LoginTest {
         AppiumUtils.clearAppCache("io.appium.settings");
 
         // Uninstall Shell BD app
-        AppiumUtils.uninstallApp("com.shell.consumer.shell_consumer");
+        AppiumUtils.uninstallApp("com.example.demo_blog");
         // Clear Shell BD app cache
-        AppiumUtils.clearAppCache("com.shell.consumer.shell_consumer");
+        AppiumUtils.clearAppCache("com.example.demo_blog");
 }
 }
 
