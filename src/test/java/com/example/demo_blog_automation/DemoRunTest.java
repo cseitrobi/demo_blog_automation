@@ -49,11 +49,11 @@ public class DemoRunTest extends config {
         emailField.sendKeys("xyz@gmail.com");
         WebElement passwordField=find.byValueKey("passwordField");
         passwordField.sendKeys("12345678");
-        Thread.sleep(1000);
+        Thread.sleep(5000);
         WebElement loginButton=find.byValueKey("loginButton");
-        Thread.sleep(1000);
+        Thread.sleep(5000);
         loginButton.click();        
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         WebElement Cart=find.byToolTip("Cart");
         Cart.click();
         Thread.sleep(5000);
