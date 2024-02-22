@@ -35,7 +35,6 @@ import io.github.ashwith.flutter.FlutterFinder;
 
 public class DemoRunTest extends config {
     RemoteWebDriver driver;
-    // private AndroidDriver driver1; // Unused, remove if not needed
     private FlutterFinder find;
     config con=new config();
 
@@ -55,6 +54,9 @@ public class DemoRunTest extends config {
         Thread.sleep(1000);
         loginButton.click();        
         Thread.sleep(2000);
+        WebElement Cart=find.byToolTip("Cart");
+        Cart.click();
+        Thread.sleep(5000);
     }
     @AfterMethod
     public void tearDown() {
